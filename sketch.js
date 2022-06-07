@@ -22,6 +22,8 @@ function touchMoved() {
 const handleUndoClick = e => {
     e.preventDefault(); 
     console.log('undo')
+    const $text = document.querySelector('.clicked');
+    $text.textContent= 'clicked'
 }
 
 // const handlePencilClick = e => {
@@ -40,7 +42,7 @@ const init = () => {
     const $undo = document.querySelector('.undo')
     $undo.addEventListener('click', handleUndoClick);
     const $color = document.querySelector('.color');
-    $color.addEventListener('touchstart', handleColorChange);
+    $color.addEventListener('touch', handleColorChange);
     // const $pencil = document.querySelector('.pencil');
     // $pencil.addEventListener('click', handlePencilClick);
 }
